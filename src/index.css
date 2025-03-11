@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-width: 100vw;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Transitions for all buttons */
+button {
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Prevent text selection on interactive elements */
+button, a {
+  user-select: none;
+}
+
+/* Improve focus styles for accessibility */
+*:focus {
+  outline: 2px solid #3f51b5;
+  outline-offset: 2px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 600px) {
+  /* Smaller text for mobile */
+  body {
+    font-size: 14px;
+  }
+  
+  /* Adjust chart container heights */
+  .chart-container {
+    height: 250px !important;
+    max-height: 250px !important;
+  }
+  
+  /* Reduce padding for mobile */
+  .MuiContainer-root {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  /* Ensure content doesn't overflow */
+  img, svg, canvas {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Improve tap targets */
+  button, 
+  .MuiButtonBase-root {
+    min-height: 42px;
+  }
+  
+  /* Prevent text overflow */
+  .MuiTypography-root {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
